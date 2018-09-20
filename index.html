@@ -1,11 +1,12 @@
-<html>
+<!DOCTYPE html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="shortcut icon" href="favicon.png" type="image/png">
 <meta charset="utf-8">
 <title>Макет</title>
-<link rel="stylesheet" type="text/css" href="dist/reset.css">
-<link rel="stylesheet" type="text/css" href="dist/bundle.css">
+<link rel="stylesheet" type="text/css" href="./dist/reset.css">
+<link rel="stylesheet" type="text/css" href="./dist/bundle.css">
+
 </head>
 <body>
 
@@ -16,117 +17,130 @@
         <div class="content">
             <div class="top-menu">
                 <div class="top-menu-top"><!--меню 1 ряд -->
-                    <div class="top-menu-top__first menu-item">
-                        col-31
+                    <div class="top-menu-top__1 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu/01.png' >
                     </div>
-                    <div class="top-menu-top__second menu-item">
-                        col-31
+                    <div class="top-menu-top__2 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu/02.png' >
                     </div>
-                    <div class="top-menu-top__third menu-item">
-                        col-31
+                    <div class="top-menu-top__3 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu/03.png' >
                     </div>
-                    <div class="top-menu-top__fourth menu-item">
-                        col-31
+                    <div class="top-menu-top__4 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu/04.png' >
                     </div>
                 </div>
                 <div class="top-menu-bot"><!--меню 2 ряд -->
-                    <div class="top-menu-bot__first menu-item">
-                        col-32
+                    <div class="top-menu-bot__5 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu/05.png' >
                     </div>
-                    <div class="top-menu-bot__second menu-item">
-                        col-32
+                    <div class="top-menu-bot__6 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu/06.png' >
                     </div>
-                    <div class="top-menu-bot__third menu-item">
-                        col-32
+                    <div class="top-menu-bot__7 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu/07.png' >
                     </div>
-                    <div class="top-menu-bot__fourth menu-item">
-                        col-32
+                    <div class="top-menu-bot__8 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu/08.png' >
                     </div>
                 </div>
             </div>
 
             <div class="dynamic-wrap">
                 <div class="dynamic-title"><!--заголовок динамической части -->
-                    ПОВЫШЕНИЕ НДС
+                    <h1 id="title">ПОВЫШЕНИЕ НДС</h1>
                 </div>
                 <div class="dynamic"><!--динамическая часть -->
                     <div class="dynamic__left"><!--левая часть -->
                         <div class="left__top"><!--верхняя часть из 2 блоков-->
                             <div class="top__left">
-                                Как сейчас?
+                                <h2>Как сейчас?</h2>
+                                <div class="div-text">
+                                    <p id="left-text">Основная ставка НДС составляет 18 процентов. Ей соответствует расчетная ставка 15,25 процентов.</p>
+                                </div>
                             </div>
                             <div class="top__right">
-                                Что изменится?
+                                <h2>Что меняется?</h2>
+                                <div class="div-text">
+                                    <p id="right-text">1 января 2019 года ставки 18 и 15,25 процентов вырастут до 20 и 16,67 процентов соответственно.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="left__bottom"><!--нижняя большая часть -->
-                            Как подготовиться?
+                            <h2>Как подготовиться?</h2>
+                            <div class="div-text">
+                                <p id="bottom-text">Использовать новую ставку надо будет, если отгрузите товары (работы, услуги) после 1 января 2019. До этого момента
+                                придется внести изменения в действующие договоры с контрагентами, обновить учетную программу и онлайн-ККТ.</p>
+                            </div>
+                            <div id="more">
+                                <img id="more-btn" alt="" src='./dist/img/img/podrobnee.png'>
+                            </div>
                         </div>
                     </div>
                     <div class="dynamic__right"><!--правая часть - картинка -->
-                        <img  alt="" src='./dist/img/1.png'>
+                        <img id="dynamic-img" alt="" src='./dist/img/img/1.png'>
                     </div>
                 </div>
                 <div class="slider"><!--слайдер -->
                     <div class="slider__title"><!--заголовок слайдера -->
-                        Документы которые пригодятся
+                        <h2>Документы которые пригодятся</h2>
                     </div>
                     <div class="slider__slider"><!--слайдер -->
                         СЛАЙДЕР
                     </div>
                 </div>
             </div>
-
-            <div class="bot-menu">
-                <div class="bot-menu__top"> <!--меню 1 ряд -->
-                    <div class="bot-menu__first menu-item">
-                        col-31
-                    </div>
-                    <div class="bot-menu__secondt menu-item">
-                        col-31
-                    </div>
-                    <div class="bot-menu__third menu-item">
-                        col-31
-                    </div>
-                    <div class="bot-menu__forth menu-item">
-                        col-31
-                    </div>
-                </div>
-                <div class="bot-menu__bot"><!--меню 2 ряд -->
-                    <div class="bot-menu__first menu-item">
-                        col-32
-                    </div>
-                    <div class="bot-menu__secondt menu-item">
-                        col-32
-                    </div>
-                    <div class="bot-menu__third menu-item">
-                        col-32
-                    </div>
-                    <div class="bot-menu__forth menu-item">
-                        col-32
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="footer">
-            <div class="footer__first"><!--footer1 -->
+            <!-- <img id="footer-img" alt="" src='./dist/img/img/1.png'> -->
+            <div class="bot-menu">
+                <div class="bot-menu-top"> <!--меню 1 ряд -->
+                    <div class="bot-menu-top__1 menu-item ">
+                        <img class="header__img" alt="" src='./dist/img/menu-bot/1.png' >
+                    </div>
+                    <div class="bot-menu-top__2 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu-bot/2.png' >
+                    </div>
+                    <div class="bot-menu-top__3 menu-item">
+                       <img class="header__img" alt="" src='./dist/img/menu-bot/3.png' >
+                    </div>
+                    <div class="bot-menu-top__4 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu-bot/4.png' >
+                    </div>
+                </div>
+                <div class="bot-menu-bot"><!--меню 2 ряд -->
+                    <div class="bot-menu-bot__5 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu-bot/5.png' >
+                    </div>
+                    <div class="bot-menu-bot__6 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu-bot/6.png' >
+                    </div>
+                    <div class="bot-menu-bot__7 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu-bot/7.png' >
+                    </div>
+                    <div class="bot-menu-bot__8 menu-item">
+                        <img class="header__img" alt="" src='./dist/img/menu-bot/8.png' >
+                    </div>
+                </div>
+            </div>
+            <div id="show-footer" class="footer__first"><!--footer1 -->
                 Смотреть все изменения
             </div>
-            <div class="footer__second"><!--footer__second -->
+            <div id="hide-footer" class="footer__second"><!--footer__second -->
                 <div class="footer__first-half">
-                    <div class="first-half__first">col-121</div>
-                    <div class="first-half__second">col-121</div>
-                    <div class="first-half__third">col-121</div>
-                    <div class="first-half__forth">col-121</div>
-                    <div class="first-half__fifth">col-121</div>
+                    <div class="first-half__first footer-item">Работы с ККТ</div>
+                    <div class="first-half__second footer-item">НДС</div>
+                    <div class="first-half__third footer-item">Повторных проверок</div>
+                    <div class="first-half__forth footer-item">Взыскания недоимки</div>
+                    <div class="first-half__fifth footer-item">Все поправки 2018 года</div>
                 </div>
                 <div class="footer__second-half">
-                    <div class="second-half__first">col-122</div>
-                    <div class="second-half__second">col-122</div>
-                    <div class="second-half__third">col-122</div>
-                    <div class="second-half__forth">col-122</div>
-                    <div class="second-half__fifth">col-122</div>
+                    <div class="second-half__first footer-item">Допмеропнриятий налогового контроля</div>
+                    <div class="second-half__second footer-item">Земельного налога</div>
+                    <div class="second-half__third footer-item">Госпошлины</div>
+                    <div class="second-half__forth footer-item">Курортного сбора</div>
+                    <div class="second-half__fifth footer-item">Что изменится в 2019 году</div>
                 </div>
             </div>
             <div class="footer__third"><!--footer3 -->
@@ -134,7 +148,6 @@
             </div>
         </div>
     </div>
-
 <script type="text/javascript" src="dist/bundle.js" charset="utf-8"></script>
 </body>
 </html>

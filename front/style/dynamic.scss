@@ -1,10 +1,13 @@
+@import "slider.scss";
+
 .dynamic-wrap{
     width:85%;
-    margin: auto;
-    margin-bottom: 20px;;
+    margin: 60px auto;
+
     text-align: center;
         .dynamic{
         display: flex;
+        margin-bottom: 20px;
             &__left{
                 flex-basis: 85%;
                 .left__top{
@@ -12,22 +15,84 @@
                     .top__left, .top__right{
                         flex-basis: 50%;
                         text-align: left;
+                        h2{
+                            font-size: 150%;
+                            text-transform: uppercase;
+                            padding: 20px 10px 20px 0;
+                            font-weight: bold;
+                            position: relative;
+                        }
+                        h2::before{
+                            content: '_____';
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -1px;
+                            width: 50px;
+                            border-bottom: 1px solid black;
+                        }
+                        .div-text{
+                           padding: 10px 20px 10px 0;
+                           font-size: 120%;
+                        }
                     }
                 }
                 .left__bottom{
                     width: 100%;
                     text-align: left;
+                    h2{
+                        font-size: 150%;
+                        text-transform: uppercase;
+                        padding: 20px 10px 20px 0;
+                        font-weight: bold;
+                        position: relative;
+                    }
+                    h2::before{
+                        content: '_____';
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -1px;
+                        width: 50px;
+                        border-bottom: 1px solid black;
+                    }
+                    .div-text{
+                        padding: 10px 20px 10px 0;
+                        font-size: 120%;
+                    }
+                    #more{
+                        width: 100%;
+                    }
+                    #more> img{
+                        float:right;
+                        margin: 10px 30px;
+                    }
+                    #more> img:hover{
+                        content:url('../../dist/img/img/podrobnee_ON.png');
+                    }
                 }
             }
 
             &__right{
             flex-basis: 15%;
                 img{
-                   width:100% 
+                   width:100%;
                 }
+            }
+        }
+        .dynamic-title{
+            width:100%;
+            h1{
+                font-size: 220%;
+                margin-bottom: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
             }
         }
         .slider{
             text-align: left;
         }
 }
+
+        // &__4 > img:hover{
+        //     content:url('../../dist/img/menu/4.png');

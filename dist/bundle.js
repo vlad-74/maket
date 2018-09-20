@@ -48,21 +48,69 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+
+	var _data = __webpack_require__(16);
+
+	var data = _interopRequireWildcard(_data);
+
 	__webpack_require__(1);
 
-	var _lodash = __webpack_require__(6);
+	var _lodash = __webpack_require__(13);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	console.log(_lodash2['default'].isEqual(1, 2));
+	var currentView = undefined;
+	var footerVisible = true;
 
-	var obj = {
-	  field1: 111,
-	  someFn: function someFn() {
-	    console.log('someFn');
+	function viewDynamic(ev) {
+	  var item = ev.target.parentElement.classList[0].split("__")[1];
+
+	  currentView = data.mock[+item - 1];
+	  console.log(currentView);
+	  console.log(item, data.mock[+item - 1].subject, data.addTwo(1, 2), data.multiplyTwo(1, 2));
+
+	  document.getElementById("title").innerHTML = data.mock[+item - 1].subject;
+	  document.getElementById("left-text").innerHTML = data.mock[+item - 1].regulations;
+	  document.getElementById("right-text").innerHTML = data.mock[+item - 1].changing;
+	  document.getElementById("bottom-text").innerHTML = data.mock[+item - 1].prepare;
+	  document.getElementById("dynamic-img").src = './dist/img/img/' + item + '.png';
+	}
+
+	var array = document.querySelectorAll(".menu-item");
+
+	for (var i = 0; i < array.length; i++) {
+	  var element = array[i];
+	  element.addEventListener("click", function (ev) {
+	    viewDynamic(ev);
+	  });
+	}
+
+	var btn = document.getElementById("more-btn").addEventListener("click", function (ev) {
+	  window.open(currentView.more, "_blank");
+	});
+
+	document.getElementById("show-footer").addEventListener("click", function (ev) {
+	  if (footerVisible) {
+	    document.getElementById("hide-footer").style.display = "none";
+	    footerVisible = false;
+	  } else {
+	    document.getElementById("hide-footer").style.display = "flex";
+	    footerVisible = true;
 	  }
-	};
-	obj.someFn();
+	});
+
+	document.addEventListener("DOMContentLoaded", function () {
+	  //Аналог $(document).ready(function(){
+	  (function () {
+	    document.getElementById("title").innerHTML = data.mock[0].subject;
+	    document.getElementById("left-text").innerHTML = data.mock[0].regulations;
+	    document.getElementById("right-text").innerHTML = data.mock[0].changing;
+	    document.getElementById("bottom-text").innerHTML = data.mock[0].prepare;
+	    document.getElementById("dynamic-img").src = "./dist/img/img/1.png";
+	    currentView = data.mock[0];
+	  })();
+	});
 
 /***/ }),
 /* 1 */
@@ -75,7 +123,14 @@
 /* 3 */,
 /* 4 */,
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -12430,10 +12485,10 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)(module), (function() { return this; }())))
 
 /***/ }),
-/* 7 */
+/* 14 */
 /***/ (function(module, exports) {
 
 	module.exports = function(module) {
@@ -12447,6 +12502,85 @@
 		return module;
 	}
 
+
+/***/ }),
+/* 15 */,
+/* 16 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+	var addTwo = function addTwo(a, b) {
+	    return a + b;
+	};
+
+	exports.addTwo = addTwo;
+	var multiplyTwo = function multiplyTwo(a, b) {
+	    return a * b;
+	};
+
+	exports.multiplyTwo = multiplyTwo;
+	var mock = [{
+	    id: 1,
+	    subject: 'повышение НДС',
+	    regulations: 'Основная ставка НДС составляет 18 процентов. Ей соответствует расчетная ставка 15,25 процентов.',
+	    changing: '1 января 2019 года ставки 18 и 15,25 процентов вырастут до 20 и 16,67 процентов соответственно.',
+	    prepare: 'Использовать новую ставку надо будет, если отгрузите товары (работы, услуги) после 1 января 2019. До этого момента придется внести изменения в действующие договоры с контрагентами, обновить учетную программу и онлайн-ККТ.',
+	    more: 'https://www.1gl.ru/#/document/184/12713/dfasuxqb2b/'
+	}, {
+	    id: 2,
+	    subject: 'ускоренные камералки',
+	    regulations: 'Срок камеральной проверки составляет три месяца.',
+	    changing: 'С 3 сентября 2018 года срок камералки по НДС сокращен до двух месяцев. ИФНС может продлить проверку на месяц, если заподозрит нарушение.',
+	    prepare: 'Новое правило относится, как к первичным декларациям, так и уточненкам, поданным после 3 сентября. Налоговики могут продлить проверку еще на месяц. Это возможно, например, из-за несоответствий в декларации с данными контрагентов. Чтобы избежать нестыковок сверьтесь с партнерами. Проверьте также показатели в отчетности по контрольным соотношениям.',
+	    more: 'https://www.1gl.ru/#/document/184/12713/dfasi72gxg/'
+	}, {
+	    id: 3,
+	    subject: 'повышение налога на прибыль',
+	    regulations: 'До 1 января 2019 года субекты РФ вправе снижать ставку налога на прибыль, который поступает в бюджет региона, с 17 до 12,5 процента',
+	    changing: 'С 1 января 2019 года регионы не смогут устанавливать пониженные налоговые ставки. Исключение сделано только для отдельных категорий организаций. Например, для резидентов ОЭЗ.',
+	    prepare: 'Если регион установил пониженные ставки до 1 января 2018 года, применяйте их до окончания срока льготы, но не позднее 1 января 2023 года. При этом учтите, что в период с 2019-го по 2022 год ранее установленные пониженные ставки могут повысить. Поэтому следите за изменением в региональных законах.',
+	    more: 'https://vip.1gl.ru/#/document/11/17757/'
+	}, {
+	    id: 4,
+	    subject: 'снижение налога на имущество',
+	    regulations: 'До 1 января не облагается налогом движимое имущество из 1–2-х амортизационных групп и льготные активы',
+	    changing: 'С 1 января 2019 года движимые активы не подпадают под налог на имущество организаций ',
+	    prepare: 'В следующем году исключите из расчета все движимые активы из 3–10-х амортизационных групп',
+	    more: 'https://www.1gl.ru/#/document/11/17933'
+	}, {
+	    id: 5,
+	    subject: 'повышение НДС',
+	    regulations: 'Основная ставка НДС составляет 18 процентов. Ей соответствует расчетная ставка 15,25 процентов.',
+	    changing: '1 января 2019 года ставки 18 и 15,25 процентов вырастут до 20 и 16,67 процентов соответственно.',
+	    prepare: 'Использовать новую ставку надо будет, если отгрузите товары (работы, услуги) после 1 января 2019. До этого момента придется внести изменения в действующие договоры с контрагентами, обновить учетную программу и онлайн-ККТ.',
+	    more: 'https://www.1gl.ru/#/document/184/12713/dfasuxqb2b/'
+	}, {
+	    id: 6,
+	    subject: 'ускоренные камералки',
+	    regulations: 'Срок камеральной проверки составляет три месяца.',
+	    changing: 'С 3 сентября 2018 года срок камералки по НДС сокращен до двух месяцев. ИФНС может продлить проверку на месяц, если заподозрит нарушение.',
+	    prepare: 'Новое правило относится, как к первичным декларациям, так и уточненкам, поданным после 3 сентября. Налоговики могут продлить проверку еще на месяц. Это возможно, например, из-за несоответствий в декларации с данными контрагентов. Чтобы избежать нестыковок сверьтесь с партнерами. Проверьте также показатели в отчетности по контрольным соотношениям.',
+	    more: 'https://www.1gl.ru/#/document/184/12713/dfasi72gxg/'
+	}, {
+	    id: 7,
+	    subject: 'повышение налога на прибыль',
+	    regulations: 'До 1 января 2019 года субекты РФ вправе снижать ставку налога на прибыль, который поступает в бюджет региона, с 17 до 12,5 процента',
+	    changing: 'С 1 января 2019 года регионы не смогут устанавливать пониженные налоговые ставки. Исключение сделано только для отдельных категорий организаций. Например, для резидентов ОЭЗ.',
+	    prepare: 'Если регион установил пониженные ставки до 1 января 2018 года, применяйте их до окончания срока льготы, но не позднее 1 января 2023 года. При этом учтите, что в период с 2019-го по 2022 год ранее установленные пониженные ставки могут повысить. Поэтому следите за изменением в региональных законах.',
+	    more: 'https://vip.1gl.ru/#/document/11/17757/'
+	}, {
+	    id: 8,
+	    subject: 'снижение налога на имущество',
+	    regulations: 'До 1 января не облагается налогом движимое имущество из 1–2-х амортизационных групп и льготные активы',
+	    changing: 'С 1 января 2019 года движимые активы не подпадают под налог на имущество организаций ',
+	    prepare: 'В следующем году исключите из расчета все движимые активы из 3–10-х амортизационных групп',
+	    more: 'https://www.1gl.ru/#/document/11/17933'
+	}];
+	exports.mock = mock;
 
 /***/ })
 /******/ ]);
