@@ -1,0 +1,33 @@
+.dynamic-wrap{
+    width:85%;
+    margin: auto;
+    margin-bottom: 20px;;
+    text-align: center;
+        .dynamic{
+        display: flex;
+            &__left{
+                flex-basis: 85%;
+                .left__top{
+                    display: flex;
+                    .top__left, .top__right{
+                        flex-basis: 50%;
+                        text-align: left;
+                    }
+                }
+                .left__bottom{
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+
+            &__right{
+            flex-basis: 15%;
+                img{
+                   width:100% 
+                }
+            }
+        }
+        .slider{
+            text-align: left;
+        }
+}

@@ -1,0 +1,14 @@
+.footer{
+    .footer__first{
+        text-align: center;
+    }
+    .footer__second{
+        display: flex;
+        .footer__first-half, .footer__second-half{
+            width: 50%
+        }
+    }
+    .footer__third{
+        text-align: center;
+    }
+}

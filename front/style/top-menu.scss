@@ -1,0 +1,13 @@
+.top-menu{
+    width:85%;
+    margin: auto;
+    .top-menu-top, .top-menu-bot{
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .menu-item{
+            flex-basis: 100%;
+        }
+    }
+}
