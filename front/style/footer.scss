@@ -83,6 +83,14 @@
                 font-size: 130%;
                 cursor: pointer;
             }
+            .footer-item:hover{
+                font-weight: bold;
+            }
+
+            .footer-item:hover::before{
+               border-bottom: 2px solid #DD483B; 
+            }
+
             .footer-item::before{
                 content: '  ';
                 display: block;

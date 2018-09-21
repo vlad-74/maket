@@ -1,12 +1,15 @@
+@import "const.scss";
+@import "animation.scss";
 @import "header.scss";
 @import "content.scss";
 @import "footer.scss";
 
-$bg-color: #FFFFFF;
+// $bg-color: #FFFFFF;
 
 body {
- background: $bg-color;
+    background: $bg-color;
 }
+
 .wrap{
     max-width: 1200px;
     margin: auto;

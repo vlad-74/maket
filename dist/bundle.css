@@ -1,3 +1,45 @@
+.colorchange {
+  background: #FFFFFF;
+  animation: colorchange .7s;
+  /* animation-name followed by duration in seconds*/
+  /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange .7s;
+  /* Chrome and Safari */ }
+
+@keyframes colorchange {
+  0% {
+    background: #CE554B;
+    opacity: 0; }
+  25% {
+    background: #CE554B;
+    opacity: .25; }
+  50% {
+    background: #CE554B;
+    opacity: .5; }
+  75% {
+    background: #CE554B;
+    opacity: .75; }
+  100% {
+    background: #FFFFFF;
+    opacity: 1; } }
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
+  0% {
+    background: #CE554B;
+    opacity: 0; }
+  25% {
+    background: #CE554B;
+    opacity: .25; }
+  50% {
+    background: #CE554B;
+    opacity: .5; }
+  75% {
+    background: #CE554B;
+    opacity: .75; }
+  100% {
+    background: #FFFFFF;
+    opacity: 1; } }
+
 .header {
   width: 85%;
   margin: auto; }
@@ -54,6 +96,7 @@
 .dynamic-wrap {
   width: 85%;
   margin: 60px auto;
+  border-radius: 10px;
   text-align: center; }
   .dynamic-wrap .dynamic {
     display: flex;
@@ -71,14 +114,16 @@
             padding: 20px 10px 20px 0;
             font-weight: bold;
             position: relative; }
+          .dynamic-wrap .dynamic__left .left__top .top__left h2:hover::before, .dynamic-wrap .dynamic__left .left__top .top__right h2:hover::before {
+            border-bottom: 2px solid #DD483B; }
           .dynamic-wrap .dynamic__left .left__top .top__left h2::before, .dynamic-wrap .dynamic__left .left__top .top__right h2::before {
-            content: '_____';
+            content: '    ';
             display: block;
             position: absolute;
-            top: 50%;
+            top: 90%;
             margin-top: -1px;
             width: 50px;
-            border-bottom: 1px solid black; }
+            border-bottom: 2px solid black; }
           .dynamic-wrap .dynamic__left .left__top .top__left .div-text, .dynamic-wrap .dynamic__left .left__top .top__right .div-text {
             padding: 10px 20px 10px 0;
             font-size: 120%; }
@@ -91,28 +136,33 @@
           padding: 20px 10px 20px 0;
           font-weight: bold;
           position: relative; }
+        .dynamic-wrap .dynamic__left .left__bottom h2:hover::before {
+          border-bottom: 2px solid #DD483B; }
         .dynamic-wrap .dynamic__left .left__bottom h2::before {
-          content: '_____';
+          content: '     ';
           display: block;
           position: absolute;
-          top: 50%;
+          top: 90%;
           margin-top: -1px;
           width: 50px;
-          border-bottom: 1px solid black; }
+          border-bottom: 2px solid black; }
         .dynamic-wrap .dynamic__left .left__bottom .div-text {
           padding: 10px 20px 10px 0;
           font-size: 120%; }
         .dynamic-wrap .dynamic__left .left__bottom #more {
-          width: 100%; }
+          width: 100%;
+          position: relative; }
         .dynamic-wrap .dynamic__left .left__bottom #more > img {
-          float: right;
-          margin: 10px 30px; }
+          position: absolute;
+          right: 10%; }
         .dynamic-wrap .dynamic__left .left__bottom #more > img:hover {
           content: url(data:image/png;base64,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); }
     .dynamic-wrap .dynamic__right {
-      flex-basis: 15%; }
+      flex-basis: 15%;
+      width: 100%; }
       .dynamic-wrap .dynamic__right img {
-        width: 100%; }
+        width: 100%;
+        margin: auto; }
   .dynamic-wrap .dynamic-title {
     width: 100%; }
     .dynamic-wrap .dynamic-title h1 {
@@ -190,6 +240,10 @@
       position: relative;
       font-size: 130%;
       cursor: pointer; }
+    .footer .footer__second .footer__first-half .footer-item:hover, .footer .footer__second .footer__second-half .footer-item:hover {
+      font-weight: bold; }
+    .footer .footer__second .footer__first-half .footer-item:hover::before, .footer .footer__second .footer__second-half .footer-item:hover::before {
+      border-bottom: 2px solid #DD483B; }
     .footer .footer__second .footer__first-half .footer-item::before, .footer .footer__second .footer__second-half .footer-item::before {
       content: '  ';
       display: block;

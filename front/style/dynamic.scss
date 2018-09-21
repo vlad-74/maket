@@ -3,6 +3,7 @@
 .dynamic-wrap{
     width:85%;
     margin: 60px auto;
+    border-radius: 10px;
 
     text-align: center;
         .dynamic{
@@ -22,14 +23,17 @@
                             font-weight: bold;
                             position: relative;
                         }
+                        h2:hover::before{
+                            border-bottom: 2px solid #DD483B; 
+                        }
                         h2::before{
-                            content: '_____';
+                            content: '    ';
                             display: block;
                             position: absolute;
-                            top: 50%;
+                            top: 90%;
                             margin-top: -1px;
                             width: 50px;
-                            border-bottom: 1px solid black;
+                            border-bottom: 2px solid black;
                         }
                         .div-text{
                            padding: 10px 20px 10px 0;
@@ -47,14 +51,17 @@
                         font-weight: bold;
                         position: relative;
                     }
+                    h2:hover::before{
+                        border-bottom: 2px solid #DD483B; 
+                    }
                     h2::before{
-                        content: '_____';
+                        content: '     ';
                         display: block;
                         position: absolute;
-                        top: 50%;
+                        top: 90%;
                         margin-top: -1px;
                         width: 50px;
-                        border-bottom: 1px solid black;
+                        border-bottom: 2px solid black;
                     }
                     .div-text{
                         padding: 10px 20px 10px 0;
@@ -62,10 +69,13 @@
                     }
                     #more{
                         width: 100%;
+                        position: relative;
                     }
                     #more> img{
-                        float:right;
-                        margin: 10px 30px;
+                        // float:right;
+                        // margin: 10px 30px;
+                        position: absolute;
+                        right:10%;
                     }
                     #more> img:hover{
                         content:url('../../dist/img/img/podrobnee_ON.png');
@@ -74,9 +84,11 @@
             }
 
             &__right{
-            flex-basis: 15%;
+                flex-basis: 15%;
+                width:100%;
                 img{
                    width:100%;
+                   margin: auto;
                 }
             }
         }
@@ -93,6 +105,3 @@
             text-align: left;
         }
 }
-
-        // &__4 > img:hover{
-        //     content:url('../../dist/img/menu/4.png');

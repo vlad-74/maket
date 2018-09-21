@@ -1,0 +1,26 @@
+
+.colorchange {
+    background: $bg-color;
+      animation: colorchange .7s; /* animation-name followed by duration in seconds*/
+         /* you could also use milliseconds (ms) or something like 2.5s */
+      -webkit-animation: colorchange .7s; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+{
+    0%   {background: #CE554B; opacity: 0;}
+    25%  {background: #CE554B; opacity: .25;}
+    50%  {background: #CE554B; opacity: .5;}
+    75%  {background: #CE554B; opacity: .75;}
+    100% {background: $bg-color; opacity: 1;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+    0%   {background: #CE554B; opacity: 0;}
+    25%  {background: #CE554B; opacity: .25;}
+    50%  {background: #CE554B; opacity: .5;}
+    75%  {background: #CE554B; opacity: .75;}
+    100% {background: $bg-color; opacity: 1;}
+}
+
