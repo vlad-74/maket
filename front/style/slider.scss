@@ -1,20 +1,92 @@
-.slider{
+.my-slider{
     .slider__title{
         h2{
             font-size: 150%;
+            text-align: left;
             text-transform: uppercase;
             padding: 20px 10px 20px 0;
             font-weight: bold;
             position: relative;
         }
         h2::before{
-            content: '_____';
+            content: '   ';
             display: block;
             position: absolute;
-            top: 50%;
+            top: 90%;
             margin-top: -1px;
             width: 50px;
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid black;
+        }
+        h2:hover::before{
+            border-bottom: 2px solid #DD483B; 
         }
     }
+    .slider__slider{
+
+        .regular {
+            width: 50%;
+            margin: 10px auto;
+
+            .slick-slide{
+                img{
+                    width: 60%;
+                    margin: 10px auto 10px auto;
+                }
+                img:nth-child(1):hover{
+                    content:url('../../dist/img/slider/dwnld_ON.png');
+                }
+                img:nth-child(3):hover{
+                    content:url('../../dist/img/img/download_ON.png');
+                }
+                p{
+                    text-align: center;
+                }
+            }
+
+            .slick-prev {
+                left: -50%;
+            }
+            .slick-prev:before {
+                content:url('../../dist/img/slider/arrowL.png');
+            }
+
+            .slick-next {
+                right: -50%;
+                transform: scale(-1, 1);
+            }
+            .slick-next:before {
+                content:url('../../dist/img/slider/arrowL.png');
+            }
+        }
+
+        .slick-slide {
+            margin: 0px 20px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+    }
+}
+
+.slick-dots li button:before {
+font-size: 33px
 }

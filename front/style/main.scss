@@ -4,7 +4,9 @@
 @import "content.scss";
 @import "footer.scss";
 
-// $bg-color: #FFFFFF;
+* {
+    box-sizing: border-box;
+}
 
 body {
     background: $bg-color;
