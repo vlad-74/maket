@@ -12,14 +12,17 @@ export const mock = [
         more: 'https://www.1gl.ru/#/document/184/12713/dfasuxqb2b/',
         link: [
             {
+                id_link:1,
                 txt: 'Дополнительное соглашение к договору поставки о повышении цены',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             },
             {
+                id_link:2,
                 txt: 'Дополнительное соглашение к договору поставки об отсрочке платежа',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             },
             {
+                id_link:3,
                 txt: 'Официальное письмо Минфина о повышении ставки НДС',
                 link: 'https://www.1gl.ru/#/document/99/550918232/'
             },
@@ -34,6 +37,7 @@ export const mock = [
         more: 'https://www.1gl.ru/#/document/184/12713/dfasi72gxg/',
         link:[
             {
+                id_link:4,
                 txt: 'Дополнительное соглашение к договору поставки о повышении цены',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             }
@@ -48,6 +52,7 @@ export const mock = [
         more: 'https://vip.1gl.ru/#/document/11/17757/',
         link:[
             {
+                id_link:5,
                 txt: 'Дополнительное соглашение к договору поставки о повышении цены',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             }
@@ -62,6 +67,7 @@ export const mock = [
         more: 'https://www.1gl.ru/#/document/11/17933',
         link:[
             {
+                id_link:6,
                 txt: 'Дополнительное соглашение к договору поставки о повышении цены',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             }
@@ -76,6 +82,7 @@ export const mock = [
         more: 'https://www.1gl.ru/#/document/184/12713/dfasuxqb2b/',
         link:[
             {
+                id_link:7,
                 txt: 'Дополнительное соглашение к договору поставки о повышении цены',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             }
@@ -90,6 +97,7 @@ export const mock = [
         more: 'https://www.1gl.ru/#/document/184/12713/dfasi72gxg/',
         link:[
             {
+                id_link:8,
                 txt: 'Дополнительное соглашение к договору поставки о повышении цены',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             }
@@ -104,6 +112,7 @@ export const mock = [
         more: 'https://vip.1gl.ru/#/document/11/17757/',
         link:[
             {
+                id_link:9,
                 txt: 'Дополнительное соглашение к договору поставки о повышении цены',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             }
@@ -118,6 +127,7 @@ export const mock = [
         more: 'https://www.1gl.ru/#/document/11/17933',
         link:[
             {
+                id_link:10,
                 txt: 'Дополнительное соглашение к договору поставки о повышении цены',
                 link: 'https://www.1gl.ru/#/document/118/60763/'
             }

@@ -15,21 +15,22 @@ function animationDiv() {
   
 }
 
-function addItem(link, txt) {
+function addItem(id, link, txt) {
   var d = document.createElement("div");
   d.className = "regular__item";
   d.innerHTML = `
-      <img src="./dist/img/slider/dwnld.png">
-      <p>` + txt + `</p>
+      <img id="`+ id +`" class="img-dld" src="./dist/img/slider/dwnld.png">
+      <div class="div-txt">
+        <p>` + txt + `</p>
+      </div>
       <div class="div-more">
-        <a class="a-link btn-media" target="_blank" href=""></a>
+        <a class="a-link btn-link" target="_blank" href="` + link  + `"></a>
       </div>
         `;
   document.getElementById("section").appendChild(d);
 }
 
 function setDataSlider(number){
-  // data.mock[number].link
 
   // удаляем старые данные
   $("#section").remove(); //#section
@@ -42,9 +43,19 @@ function setDataSlider(number){
     for (let index = 0; index < data.mock[number].link.length; index++) {
       const link = data.mock[number].link[index].link;
       const txt = data.mock[number].link[index].txt;
-      addItem(link, txt);
+      const id = data.mock[number].link[index].id_link;
+      addItem(id, link, txt);
     }
 };
+
+function setActive(){
+  
+  let els = document.querySelectorAll(".slick-slide");
+  for (let i = 0; i < els.length; i++) {
+    const element = els[i];
+    element.style.opacity = 1
+    }
+}
 
 function setData(number){
   document.getElementById("title").innerHTML = data.mock[number].subject;
@@ -56,20 +67,22 @@ function setData(number){
   setDataSlider(number);
 
   $(".regular").slick({
-    dots: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 3
   });
+setTimeout(() => {
+  setActive();
+}, 300);
+  
 }
 
 function viewDynamic(ev){
   animationDiv()
   let item = ev.target.parentElement.classList[0].split("__")[1];
-  console.log(item);
+
   currentView = data.mock[+item - 1];
   console.log(currentView);
-  console.log(item, data.mock[+item - 1].subject, data.addTwo(1, 2), data.multiplyTwo(1, 2));
 
   setData(+item - 1);
 }
@@ -83,6 +96,9 @@ for (let i = 0; i < array.length; i++) {
   });
 }
 
+function downloadItem(ev){
+  console.log(ev.target.id)
+}
 // =================================addEventListener=================================
 
 var btn = document.getElementById("more-btn").addEventListener("click", function (ev) {
@@ -103,6 +119,14 @@ document.addEventListener("DOMContentLoaded", function() {//Аналог $(docum
   (function() {
     setData(0);
     currentView = data.mock[0];
+    let array = document.querySelectorAll(".img-dld");
+    for (let i = 0; i < array.length; i++) {
+      const element = array[i];
+      element.addEventListener("click", function (ev) {
+        downloadItem(ev);
+      });
+    }
+    
   })();
 });
 

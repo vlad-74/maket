@@ -93,22 +93,28 @@ font-size: 33px
 }
 
 .div-more{
-    height: 30px; 
-    width: 80px;
-    
-    .btn-media{
+    height: 40px; 
+    width: 90px;
+    position: relative;
+    .btn-link{
         border-radius: 5px;
-        height: 30px; 
-        width: 80px;
+        height: 100%; 
+        width: 100%;
         background-size: 100%;
         background-color: transparent;
         background-repeat:no-repeat;
         border:none;
-        line-height:50px;
         position: absolute;
+        left: 30%;
     }
 
     .a-link{
         background-image:url('../../dist/img/img/podrobnee.png');
     }
+    .a-link:hover{
+        background-image:url('../../dist/img/img/podrobnee_ON.png');
+    }
+}
+.div-txt{
+    height: 100px;
 }

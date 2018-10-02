@@ -57,7 +57,7 @@
 
 	__webpack_require__(2);
 
-	var _lodash = __webpack_require__(26);
+	var _lodash = __webpack_require__(27);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -73,15 +73,14 @@
 	  }, 0);
 	}
 
-	function addItem(link, txt) {
+	function addItem(id, link, txt) {
 	  var d = document.createElement("div");
 	  d.className = "regular__item";
-	  d.innerHTML = '\n      <img src="./dist/img/slider/dwnld.png">\n      <p>' + txt + '</p>\n      <div class="div-more">\n        <a class="a-link btn-media" target="_blank" href=""></a>\n      </div>\n        ';
+	  d.innerHTML = '\n      <img id="' + id + '" class="img-dld" src="./dist/img/slider/dwnld.png">\n      <div class="div-txt">\n        <p>' + txt + '</p>\n      </div>\n      <div class="div-more">\n        <a class="a-link btn-link" target="_blank" href="' + link + '"></a>\n      </div>\n        ';
 	  document.getElementById("section").appendChild(d);
 	}
 
 	function setDataSlider(number) {
-	  // data.mock[number].link
 
 	  // удаляем старые данные
 	  $("#section").remove(); //#section
@@ -94,9 +93,19 @@
 	  for (var index = 0; index < data.mock[number].link.length; index++) {
 	    var link = data.mock[number].link[index].link;
 	    var txt = data.mock[number].link[index].txt;
-	    addItem(link, txt);
+	    var id = data.mock[number].link[index].id_link;
+	    addItem(id, link, txt);
 	  }
 	};
+
+	function setActive() {
+
+	  var els = document.querySelectorAll(".slick-slide");
+	  for (var i = 0; i < els.length; i++) {
+	    var element = els[i];
+	    element.style.opacity = 1;
+	  }
+	}
 
 	function setData(number) {
 	  document.getElementById("title").innerHTML = data.mock[number].subject;
@@ -108,20 +117,21 @@
 	  setDataSlider(number);
 
 	  $(".regular").slick({
-	    dots: true,
 	    infinite: true,
 	    slidesToShow: 3,
-	    slidesToScroll: 1
+	    slidesToScroll: 3
 	  });
+	  setTimeout(function () {
+	    setActive();
+	  }, 300);
 	}
 
 	function viewDynamic(ev) {
 	  animationDiv();
 	  var item = ev.target.parentElement.classList[0].split("__")[1];
-	  console.log(item);
+
 	  currentView = data.mock[+item - 1];
 	  console.log(currentView);
-	  console.log(item, data.mock[+item - 1].subject, data.addTwo(1, 2), data.multiplyTwo(1, 2));
 
 	  setData(+item - 1);
 	}
@@ -135,6 +145,9 @@
 	  });
 	}
 
+	function downloadItem(ev) {
+	  console.log(ev.target.id);
+	}
 	// =================================addEventListener=================================
 
 	var btn = document.getElementById("more-btn").addEventListener("click", function (ev) {
@@ -156,6 +169,13 @@
 	  (function () {
 	    setData(0);
 	    currentView = data.mock[0];
+	    var array = document.querySelectorAll(".img-dld");
+	    for (var i = 0; i < array.length; i++) {
+	      var element = array[i];
+	      element.addEventListener("click", function (ev) {
+	        downloadItem(ev);
+	      });
+	    }
 	  })();
 	});
 
@@ -187,12 +207,15 @@
 	    prepare: 'Использовать новую ставку надо будет, если отгрузите товары (работы, услуги) после 1 января 2019. До этого момента придется внести изменения в действующие договоры с контрагентами, обновить учетную программу и онлайн-ККТ.',
 	    more: 'https://www.1gl.ru/#/document/184/12713/dfasuxqb2b/',
 	    link: [{
+	        id_link: 1,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }, {
+	        id_link: 2,
 	        txt: 'Дополнительное соглашение к договору поставки об отсрочке платежа',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }, {
+	        id_link: 3,
 	        txt: 'Официальное письмо Минфина о повышении ставки НДС',
 	        link: 'https://www.1gl.ru/#/document/99/550918232/'
 	    }]
@@ -204,6 +227,7 @@
 	    prepare: 'Новое правило относится, как к первичным декларациям, так и уточненкам, поданным после 3 сентября. Налоговики могут продлить проверку еще на месяц. Это возможно, например, из-за несоответствий в декларации с данными контрагентов. Чтобы избежать нестыковок сверьтесь с партнерами. Проверьте также показатели в отчетности по контрольным соотношениям.',
 	    more: 'https://www.1gl.ru/#/document/184/12713/dfasi72gxg/',
 	    link: [{
+	        id_link: 4,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }]
@@ -215,6 +239,7 @@
 	    prepare: 'Если регион установил пониженные ставки до 1 января 2018 года, применяйте их до окончания срока льготы, но не позднее 1 января 2023 года. При этом учтите, что в период с 2019-го по 2022 год ранее установленные пониженные ставки могут повысить. Поэтому следите за изменением в региональных законах.',
 	    more: 'https://vip.1gl.ru/#/document/11/17757/',
 	    link: [{
+	        id_link: 5,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }]
@@ -226,6 +251,7 @@
 	    prepare: 'В следующем году исключите из расчета все движимые активы из 3–10-х амортизационных групп',
 	    more: 'https://www.1gl.ru/#/document/11/17933',
 	    link: [{
+	        id_link: 6,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }]
@@ -237,6 +263,7 @@
 	    prepare: 'Использовать новую ставку надо будет, если отгрузите товары (работы, услуги) после 1 января 2019. До этого момента придется внести изменения в действующие договоры с контрагентами, обновить учетную программу и онлайн-ККТ.',
 	    more: 'https://www.1gl.ru/#/document/184/12713/dfasuxqb2b/',
 	    link: [{
+	        id_link: 7,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }]
@@ -248,6 +275,7 @@
 	    prepare: 'Новое правило относится, как к первичным декларациям, так и уточненкам, поданным после 3 сентября. Налоговики могут продлить проверку еще на месяц. Это возможно, например, из-за несоответствий в декларации с данными контрагентов. Чтобы избежать нестыковок сверьтесь с партнерами. Проверьте также показатели в отчетности по контрольным соотношениям.',
 	    more: 'https://www.1gl.ru/#/document/184/12713/dfasi72gxg/',
 	    link: [{
+	        id_link: 8,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }]
@@ -259,6 +287,7 @@
 	    prepare: 'Если регион установил пониженные ставки до 1 января 2018 года, применяйте их до окончания срока льготы, но не позднее 1 января 2023 года. При этом учтите, что в период с 2019-го по 2022 год ранее установленные пониженные ставки могут повысить. Поэтому следите за изменением в региональных законах.',
 	    more: 'https://vip.1gl.ru/#/document/11/17757/',
 	    link: [{
+	        id_link: 9,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }]
@@ -270,6 +299,7 @@
 	    prepare: 'В следующем году исключите из расчета все движимые активы из 3–10-х амортизационных групп',
 	    more: 'https://www.1gl.ru/#/document/11/17933',
 	    link: [{
+	        id_link: 10,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
 	    }]
@@ -285,7 +315,7 @@
 
 /***/ }),
 
-/***/ 26:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -12640,11 +12670,11 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(27)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)(module), (function() { return this; }())))
 
 /***/ }),
 
-/***/ 27:
+/***/ 28:
 /***/ (function(module, exports) {
 
 	module.exports = function(module) {
