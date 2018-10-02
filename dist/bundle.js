@@ -119,7 +119,7 @@
 	  $(".regular").slick({
 	    infinite: true,
 	    slidesToShow: 3,
-	    slidesToScroll: 3
+	    slidesToScroll: 1
 	  });
 	  setTimeout(function () {
 	    setActive();
@@ -315,6 +315,26 @@
 	        id_link: 10,
 	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
 	        link: 'https://www.1gl.ru/#/document/118/60763/'
+	    }, {
+	        id_link: 11,
+	        txt: 'Дополнительное соглашение к договору поставки об отсрочке платежа',
+	        link: 'https://www.1gl.ru/#/document/118/60763/'
+	    }, {
+	        id_link: 12,
+	        txt: 'Официальное письмо Минфина о повышении ставки НДС',
+	        link: 'https://www.1gl.ru/#/document/99/550918232/'
+	    }, {
+	        id_link: 13,
+	        txt: 'Дополнительное соглашение к договору поставки о повышении цены',
+	        link: 'https://www.1gl.ru/#/document/118/60763/'
+	    }, {
+	        id_link: 14,
+	        txt: 'Дополнительное соглашение к договору поставки об отсрочке платежа',
+	        link: 'https://www.1gl.ru/#/document/118/60763/'
+	    }, {
+	        id_link: 15,
+	        txt: 'Официальное письмо Минфина о повышении ставки НДС',
+	        link: 'https://www.1gl.ru/#/document/99/550918232/'
 	    }]
 	}];
 	exports.mock = mock;
