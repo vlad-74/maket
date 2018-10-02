@@ -142,6 +142,22 @@
 .slick-dots li button:before {
   font-size: 33px; }
 
+.div-more {
+  height: 30px;
+  width: 80px; }
+  .div-more .btn-media {
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    background-size: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    line-height: 50px;
+    position: absolute; }
+  .div-more .a-link {
+    background-image: url(data:image/png;base64,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); }
+
 .dynamic-wrap {
   width: 85%;
   margin: 60px auto;
@@ -235,13 +251,14 @@
     .footer .bot-menu .bot-menu-top .menu-item, .footer .bot-menu .bot-menu-bot .menu-item {
       flex-basis: 100%;
       width: 70%;
-      cursor: pointer; }
-      .footer .bot-menu .bot-menu-top .menu-item img, .footer .bot-menu .bot-menu-bot .menu-item img {
-        width: 50%; }
-    .footer .bot-menu .bot-menu-top .menu-item > img, .footer .bot-menu .bot-menu-bot .menu-item > img {
-      padding: 10px 20px;
-      margin: auto;
+      cursor: pointer;
+      font-size: 24px;
       text-transform: uppercase;
+      vertical-align: middle;
+      margin: auto;
+      padding: 5px 0; }
+    .footer .bot-menu .bot-menu-top .menu-item:hover, .footer .bot-menu .bot-menu-bot .menu-item:hover {
+      background: #EBE5D2;
       font-weight: bold; }
   .footer .bot-menu .bot-menu-top {
     margin: 10px; }
@@ -273,7 +290,10 @@
 .footer .footer__first {
   background: #DF4834;
   text-align: center;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 36px;
+  color: white;
+  padding: 50px 0; }
 
 .footer .footer__second {
   background: #F1E3B9;
@@ -287,6 +307,9 @@
       position: relative;
       font-size: 130%;
       cursor: pointer; }
+      .footer .footer__second .footer__first-half .footer-item a, .footer .footer__second .footer__second-half .footer-item a {
+        text-decoration: none;
+        color: black; }
     .footer .footer__second .footer__first-half .footer-item:hover, .footer .footer__second .footer__second-half .footer-item:hover {
       font-weight: bold; }
     .footer .footer__second .footer__first-half .footer-item:hover::before, .footer .footer__second .footer__second-half .footer-item:hover::before {
@@ -303,7 +326,8 @@
 
 .footer .footer__third {
   background: #FFFFFF;
-  text-align: center; }
+  text-align: center;
+  padding: 10px 0; }
 
 * {
   box-sizing: border-box; }
