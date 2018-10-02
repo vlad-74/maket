@@ -254,7 +254,7 @@
     text-align: center;
     display: flex;
     justify-content: space-between; }
-    .footer .bot-menu .bot-menu-top .menu-item, .footer .bot-menu .bot-menu-bot .menu-item {
+    .footer .bot-menu .bot-menu-top .menu-item-bot, .footer .bot-menu .bot-menu-bot .menu-item-bot {
       flex-basis: 100%;
       width: 70%;
       cursor: pointer;
@@ -263,7 +263,7 @@
       vertical-align: middle;
       margin: auto;
       padding: 5px 0; }
-    .footer .bot-menu .bot-menu-top .menu-item:hover, .footer .bot-menu .bot-menu-bot .menu-item:hover {
+    .footer .bot-menu .bot-menu-top .menu-item-bot:hover, .footer .bot-menu .bot-menu-bot .menu-item-bot:hover {
       background: #EBE5D2;
       font-weight: bold; }
   .footer .bot-menu .bot-menu-top {

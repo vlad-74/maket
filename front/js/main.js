@@ -71,33 +71,46 @@ function setData(number){
     slidesToShow: 3,
     slidesToScroll: 3
   });
-setTimeout(() => {
-  setActive();
-}, 300);
+  setTimeout(() => {
+    setActive();
+  }, 300);
   
 }
 
-function viewDynamic(ev){
+function viewDynamic(ev, bool){
+  let item;
   animationDiv()
-  let item = ev.target.parentElement.classList[0].split("__")[1];
-
+  if (!bool){
+    item = ev.target.parentElement.classList[0].split("__")[1];
+  } else {
+    item = ev.target.className.split("__")[1].split(" ")[0]
+  }
   currentView = data.mock[+item - 1];
   console.log(currentView);
 
   setData(+item - 1);
 }
 
+function downloadItem(ev){
+  console.log(ev.target.id)
+}
+
 var array = document.querySelectorAll(".menu-item");
 
 for (let i = 0; i < array.length; i++) {
   const element = array[i];
-  element.addEventListener("click", function(ev) {
-    viewDynamic(ev);
+  element.addEventListener("click", function (ev) {
+    viewDynamic(ev, false);
   });
 }
 
-function downloadItem(ev){
-  console.log(ev.target.id)
+var array = document.querySelectorAll(".menu-item-bot");
+
+for (let i = 0; i < array.length; i++) {
+  const element = array[i];
+  element.addEventListener("click", function (ev) {
+    viewDynamic(ev, true);
+  });
 }
 // =================================addEventListener=================================
 
