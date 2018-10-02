@@ -202,16 +202,6 @@
 	Object.defineProperty(exports, '__esModule', {
 	    value: true
 	});
-	var addTwo = function addTwo(a, b) {
-	    return a + b;
-	};
-
-	exports.addTwo = addTwo;
-	var multiplyTwo = function multiplyTwo(a, b) {
-	    return a * b;
-	};
-
-	exports.multiplyTwo = multiplyTwo;
 	var mock = [{
 	    id: 1,
 	    subject: 'повышение НДС',
