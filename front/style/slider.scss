@@ -40,6 +40,7 @@
                 }
                 p{
                     text-align: center;
+                    font-size: 90%;
                 }
 
             }
@@ -96,6 +97,7 @@ font-size: 33px
     height: 40px; 
     width: 90px;
     position: relative;
+    margin-top: 10px;
     .btn-link{
         border-radius: 5px;
         height: 100%; 
@@ -119,5 +121,7 @@ font-size: 33px
     cursor: pointer;
 }
 .div-txt{
-    height: 100px;
+    height: 100px; 
+    overflow: hidden; // Обрезаем все, что не помещается в область /
+    text-overflow: ellipsis; // Добавляем многоточие /
 }
