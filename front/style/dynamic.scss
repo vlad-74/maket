@@ -18,9 +18,9 @@
                         text-align: left;
                         h2{
                             font-size: 150%;
-                            text-transform: uppercase;
+                            // text-transform: uppercase;
                             padding: 20px 10px 20px 0;
-                            font-weight: bold;
+                            // font-weight: bold;
                             position: relative;
                         }
                         h2:hover::before{
@@ -37,7 +37,7 @@
                         }
                         .div-text{
                            padding: 10px 20px 10px 0;
-                           font-size: 120%;
+                           font-size: 100%;
                         }
                     }
                 }
@@ -46,9 +46,9 @@
                     text-align: left;
                     h2{
                         font-size: 150%;
-                        text-transform: uppercase;
+                        // text-transform: uppercase;
                         padding: 20px 10px 20px 0;
-                        font-weight: bold;
+                        // font-weight: bold;
                         position: relative;
                     }
                     h2:hover::before{
@@ -65,7 +65,7 @@
                     }
                     .div-text{
                         padding: 10px 20px 10px 0;
-                        font-size: 120%;
+                        font-size: 100%;
                     }
                     #more{
                         width: 100%;
@@ -98,8 +98,9 @@
             h1{
                 font-size: 220%;
                 margin-bottom: 20px;
-                font-weight: bold;
+                // font-weight: bold;
                 text-transform: uppercase;
+                font-family: Verdana, Tahoma, sans-serif;
             }
         }
 }

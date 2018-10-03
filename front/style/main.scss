@@ -12,10 +12,20 @@ body {
     background: $bg-color;
 }
 
+body, h1, h2, .dynamic-wrap .dynamic-title h1,
+.dynamic-wrap .dynamic__left .left__top .top__left h2,
+.dynamic-wrap .dynamic__left .left__bottom h2,
+.my-slider .slider__title h2,
+.footer .bot-menu .bot-menu-top .menu-item-bot,
+.footer .footer__second .footer__first-half .footer-item {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
 .wrap{
     max-width: 1200px;
     margin: auto;
 }
+
 // div{
 //     outline: 1px solid green;
 // }
