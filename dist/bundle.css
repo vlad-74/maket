@@ -345,6 +345,190 @@
   text-align: center;
   padding: 10px 0; }
 
+@media (min-width: 961px) and (max-width: 5000px) {
+  .div-txt {
+    width: 120%;
+    height: 100px; } }
+
+@media (min-width: 880px) and (max-width: 960px) {
+  .div-txt {
+    width: 130%;
+    height: 80px;
+    padding: 0 2px; }
+  .my-slider .slider__slider .regular .slick-slide p {
+    font-size: 70%; }
+  .footer .bot-menu .bot-menu-top .menu-item-bot,
+  .footer .bot-menu .bot-menu-bot .menu-item-bot {
+    font-size: 18px; } }
+
+@media (min-width: 800px) and (max-width: 879px) {
+  .div-txt {
+    width: 140%;
+    height: 80px; }
+  .my-slider .slider__slider .regular .slick-slide p {
+    font-size: 70%; }
+  .footer .bot-menu .bot-menu-top .menu-item-bot,
+  .footer .bot-menu .bot-menu-bot .menu-item-bot {
+    font-size: 16px; } }
+
+@media (min-width: 700px) and (max-width: 799px) {
+  .dynamic-wrap .dynamic-title h1,
+  .footer .footer__first {
+    font-size: 180%; }
+  .dynamic-wrap .dynamic__left .left__top .top__left h2,
+  .dynamic-wrap .dynamic__left .left__top .top__right h2,
+  .dynamic-wrap .dynamic__left .left__bottom h2 {
+    font-size: 120%; }
+  .dynamic-wrap .dynamic__left .left__top .top__left .div-text,
+  .dynamic-wrap .dynamic__left .left__top .top__right .div-text,
+  .dynamic-wrap .dynamic__left .left__bottom .div-text {
+    font-size: 80%; }
+  .dynamic-wrap .dynamic__left .left__bottom #more > img {
+    width: 14%; }
+  .div-txt {
+    width: 150%;
+    height: 60px; }
+    .div-txt p {
+      margin: 0 9px; }
+  .my-slider .slider__slider .regular .slick-slide p {
+    font-size: 60%; }
+  .footer .bot-menu .bot-menu-top .menu-item-bot,
+  .footer .bot-menu .bot-menu-bot .menu-item-bot,
+  .footer .footer__second .footer__first-half .footer-item,
+  .footer .footer__second .footer__second-half .footer-item {
+    font-size: 14px; }
+  .dynamic-wrap {
+    margin: 30px auto; } }
+
+@media (min-width: 600px) and (max-width: 699px) {
+  .dynamic-wrap .dynamic-title h1,
+  .footer .footer__first {
+    font-size: 120%; }
+  .dynamic-wrap .dynamic__left .left__top .top__left h2,
+  .dynamic-wrap .dynamic__left .left__top .top__right h2,
+  .dynamic-wrap .dynamic__left .left__bottom h2,
+  .footer .bot-menu .bot-menu-top .menu-item-bot,
+  .footer .bot-menu .bot-menu-bot .menu-item-bot,
+  .footer .footer__second .footer__first-half .footer-item,
+  .footer .footer__second .footer__second-half .footer-item {
+    font-size: 12px; }
+  .dynamic-wrap .dynamic__left .left__top .top__left .div-text,
+  .dynamic-wrap .dynamic__left .left__top .top__right .div-text,
+  .dynamic-wrap .dynamic__left .left__bottom .div-text,
+  .my-slider .slider__slider .regular .slick-slide p {
+    font-size: 52%; }
+  .dynamic-wrap .dynamic__left .left__bottom #more > img {
+    width: 14%; }
+  .div-txt {
+    width: 120%;
+    height: 60px; }
+    .div-txt p {
+      margin: 0 9px; }
+  .my-slider .slider__slider .regular {
+    width: 70%; }
+  .dynamic-wrap {
+    margin: 30px auto; }
+  h6 {
+    font-size: 12px; } }
+
+@media (min-width: 500px) and (max-width: 599px) {
+  .dynamic-wrap .dynamic-title h1,
+  .my-slider .slider__title h2,
+  .footer .footer__first {
+    font-size: 100%; }
+  .dynamic-wrap .dynamic__left .left__top .top__left h2,
+  .dynamic-wrap .dynamic__left .left__top .top__right h2,
+  .dynamic-wrap .dynamic__left .left__bottom h2,
+  .footer .bot-menu .bot-menu-top .menu-item-bot,
+  .footer .bot-menu .bot-menu-bot .menu-item-bot,
+  .footer .footer__second .footer__first-half .footer-item,
+  .footer .footer__second .footer__second-half .footer-item {
+    font-size: 9px; }
+  .dynamic-wrap .dynamic__left .left__top .top__left .div-text,
+  .dynamic-wrap .dynamic__left .left__top .top__right .div-text,
+  .dynamic-wrap .dynamic__left .left__bottom .div-text,
+  .my-slider .slider__slider .regular .slick-slide p {
+    font-size: 50%; }
+  .dynamic-wrap .dynamic__left .left__bottom #more > img {
+    width: 14%; }
+  .div-txt {
+    width: 120%;
+    height: 60px; }
+    .div-txt p {
+      margin: 0 9px; }
+  .my-slider .slider__slider .regular {
+    width: 70%; }
+  .dynamic-wrap {
+    margin: 30px auto; }
+  h6 {
+    font-size: 12px; } }
+
+@media (min-width: 400px) and (max-width: 499px) {
+  .dynamic-wrap .dynamic-title h1,
+  .my-slider .slider__title h2,
+  .footer .footer__first {
+    font-size: 100%; }
+  .dynamic-wrap .dynamic__left .left__top .top__left h2,
+  .dynamic-wrap .dynamic__left .left__top .top__right h2,
+  .dynamic-wrap .dynamic__left .left__bottom h2,
+  .footer .footer__second .footer__first-half .footer-item,
+  .footer .footer__second .footer__second-half .footer-item {
+    font-size: 9px; }
+  .footer .bot-menu .bot-menu-top .menu-item-bot,
+  .footer .bot-menu .bot-menu-bot .menu-item-bot {
+    font-size: 7px; }
+  .dynamic-wrap .dynamic__left .left__top .top__left .div-text,
+  .dynamic-wrap .dynamic__left .left__top .top__right .div-text,
+  .dynamic-wrap .dynamic__left .left__bottom .div-text,
+  .my-slider .slider__slider .regular .slick-slide p {
+    font-size: 40%; }
+  .dynamic-wrap .dynamic__left .left__bottom #more > img {
+    width: 14%; }
+  .div-txt {
+    width: 150%;
+    height: 60px; }
+    .div-txt p {
+      margin: 0 9px; }
+  .my-slider .slider__slider .regular {
+    width: 80%; }
+  .dynamic-wrap {
+    margin: 30px auto; }
+  h6 {
+    font-size: 12px; } }
+
+@media (min-width: 300px) and (max-width: 399px) {
+  .dynamic-wrap .dynamic-title h1,
+  .my-slider .slider__title h2,
+  .footer .footer__first {
+    font-size: 100%; }
+  .dynamic-wrap .dynamic__left .left__top .top__left h2,
+  .dynamic-wrap .dynamic__left .left__top .top__right h2,
+  .dynamic-wrap .dynamic__left .left__bottom h2,
+  .footer .footer__second .footer__first-half .footer-item,
+  .footer .footer__second .footer__second-half .footer-item {
+    font-size: 9px; }
+  .footer .bot-menu .bot-menu-top .menu-item-bot,
+  .footer .bot-menu .bot-menu-bot .menu-item-bot {
+    font-size: 7px; }
+  .dynamic-wrap .dynamic__left .left__top .top__left .div-text,
+  .dynamic-wrap .dynamic__left .left__top .top__right .div-text,
+  .dynamic-wrap .dynamic__left .left__bottom .div-text,
+  .my-slider .slider__slider .regular .slick-slide p {
+    font-size: 40%; }
+  .dynamic-wrap .dynamic__left .left__bottom #more > img {
+    width: 14%; }
+  .div-txt {
+    width: 150%;
+    height: 60px; }
+    .div-txt p {
+      margin: 0 9px; }
+  .my-slider .slider__slider .regular {
+    width: 80%; }
+  .dynamic-wrap {
+    margin: 30px auto; }
+  h6 {
+    font-size: 12px; } }
+
 * {
   box-sizing: border-box; }
 
