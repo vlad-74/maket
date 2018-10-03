@@ -117,13 +117,13 @@ var btn = document.getElementById("more-btn").addEventListener("click", function
 });
 
 document.getElementById("show-footer").addEventListener("click", function (ev) {
-  if (footerVisible){
-    document.getElementById("hide-footer").style.display = "none";
-    footerVisible = false;
-  } else {
-    document.getElementById("hide-footer").style.display = "flex";
-    footerVisible = true;
-  }
+  // if (footerVisible){
+  //   document.getElementById("hide-footer").style.display = "none";
+  //   footerVisible = false;
+  // } else {
+  //   document.getElementById("hide-footer").style.display = "flex";
+  //   footerVisible = true;
+  // }
 });
 
 document.addEventListener("DOMContentLoaded", function() {//Аналог $(document).ready(function(){

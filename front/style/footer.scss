@@ -1,7 +1,7 @@
 .footer{
     .bot-menu{
         margin: auto;
-        background:#F9F6EC;
+        background:#FBF8F1;
         padding: 20px 10px;
         .bot-menu-top, .bot-menu-bot{
             margin: auto;
@@ -13,7 +13,7 @@
                 width: 70%;
                 cursor: pointer;
                 font-size: 22px;
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 vertical-align:middle;
                 margin: auto;
                 padding: 5px 0;
@@ -66,12 +66,11 @@
     }
 
     .footer__first{
-        background:#DF4834;
+        background:#F6E8C6;
         text-align: center;
-        cursor: pointer;
+        // cursor: pointer;
         font-size: 36px;
-        color: white;
-        padding: 50px 0;
+        padding: 20px 0;
         i {
             border: solid white;
             border-width: 0 8px 8px 0;
@@ -88,7 +87,7 @@
         }
     }
     .footer__second{
-        background:#F1E3B9;
+        background:#F6E8C6;
         display: flex;
         padding: 2%  5%;
         text-align: left;
@@ -98,6 +97,7 @@
                 padding: 2% 0;
                 position: relative;
                 font-size: 130%;
+                padding: 20px 0;
                 cursor: pointer;
                 a{
                     text-decoration: none;
