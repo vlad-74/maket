@@ -19,13 +19,10 @@ function addItem(id, link, txt) {
   var d = document.createElement("div");
   d.className = "regular__item";
   d.innerHTML = `
+    <div class="div-txt">
+      <p>` + txt + `</p>
+    </div>
       <img id="`+ id +`" class="img-dld" src="./dist/img/slider/dwnld.png">
-      <div class="div-txt">
-        <p>` + txt + `</p>
-      </div>
-      <div class="div-more">
-        <a class="a-link btn-link" target="_blank" href="` + link  + `"></a>
-      </div>
         `;
   document.getElementById("section").appendChild(d);
 }

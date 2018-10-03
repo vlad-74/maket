@@ -29,15 +29,15 @@
 
             .slick-slide{
                 img{
-                    width: 60%;
+                    width: 20%;
                     margin: 10px auto 10px auto;
                 }
-                img:nth-child(1):hover{
+                img:hover{
                     content:url('../../dist/img/slider/dwnld_ON.png');
                 }
-                img:nth-child(3):hover{
-                    content:url('../../dist/img/img/download_ON.png');
-                }
+                // img:nth-child(3):hover{
+                //     content:url('../../dist/img/img/download_ON.png');
+                // }
                 p{
                     text-align: center;
                     font-size: 90%;

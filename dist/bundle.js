@@ -76,7 +76,7 @@
 	function addItem(id, link, txt) {
 	  var d = document.createElement("div");
 	  d.className = "regular__item";
-	  d.innerHTML = '\n      <img id="' + id + '" class="img-dld" src="./dist/img/slider/dwnld.png">\n      <div class="div-txt">\n        <p>' + txt + '</p>\n      </div>\n      <div class="div-more">\n        <a class="a-link btn-link" target="_blank" href="' + link + '"></a>\n      </div>\n        ';
+	  d.innerHTML = '\n    <div class="div-txt">\n      <p>' + txt + '</p>\n    </div>\n      <img id="' + id + '" class="img-dld" src="./dist/img/slider/dwnld.png">\n        ';
 	  document.getElementById("section").appendChild(d);
 	}
 
