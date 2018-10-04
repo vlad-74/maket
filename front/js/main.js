@@ -93,7 +93,7 @@ function downloadItem(ev){
   console.log(ev.target.id)
 }
 
-var array = document.querySelectorAll(".menu-item");
+let array = document.querySelectorAll(".menu-item");
 
 for (let i = 0; i < array.length; i++) {
   const element = array[i];
@@ -102,42 +102,45 @@ for (let i = 0; i < array.length; i++) {
   });
 }
 
-var array = document.querySelectorAll(".menu-item-bot");
+let array2 = document.querySelectorAll(".menu-item-bot");
 
-for (let i = 0; i < array.length; i++) {
-  const element = array[i];
-  element.addEventListener("click", function (ev) {
+for (let i = 0; i < array2.length; i++) {
+  const element2 = array2[i];
+  element2.addEventListener("click", function (ev) {
     viewDynamic(ev, true);
   });
 }
+
 // =================================addEventListener=================================
 
 var btn = document.getElementById("more-btn").addEventListener("click", function (ev) {
   window.open(currentView.more, "_blank");
 });
 
-document.getElementById("show-footer").addEventListener("click", function (ev) {
-  // if (footerVisible){
-  //   document.getElementById("hide-footer").style.display = "none";
-  //   footerVisible = false;
-  // } else {
-  //   document.getElementById("hide-footer").style.display = "flex";
-  //   footerVisible = true;
-  // }
-});
+// document.getElementById("show-footer").addEventListener("click", function (ev) {
+//   if (footerVisible){
+//     document.getElementById("hide-footer").style.display = "none";
+//     footerVisible = false;
+//   } else {
+//     document.getElementById("hide-footer").style.display = "flex";
+//     footerVisible = true;
+//   }
+// });
 
 document.addEventListener("DOMContentLoaded", function() {//Аналог $(document).ready(function(){
   (function() {
     setData(0);
-    currentView = data.mock[0];
-    let array = document.querySelectorAll(".img-dld");
-    for (let i = 0; i < array.length; i++) {
-      const element = array[i];
-      element.addEventListener("click", function (ev) {
+    currentView = data.mock[0]; 
+    
+    let array3 = document.querySelectorAll(".img-dld");
+    for (let i = 0; i < array3.length; i++) {
+      const element3 = array3[i];
+      element3.addEventListener("click", function (ev) {
+        alert('!!!!');
         downloadItem(ev);
       });
     }
-    
+
   })();
 });
 

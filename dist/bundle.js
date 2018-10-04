@@ -57,7 +57,7 @@
 
 	__webpack_require__(2);
 
-	var _lodash = __webpack_require__(27);
+	var _lodash = __webpack_require__(26);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -154,39 +154,42 @@
 	  });
 	}
 
-	var array = document.querySelectorAll(".menu-item-bot");
+	var array2 = document.querySelectorAll(".menu-item-bot");
 
-	for (var i = 0; i < array.length; i++) {
-	  var element = array[i];
-	  element.addEventListener("click", function (ev) {
+	for (var i = 0; i < array2.length; i++) {
+	  var element2 = array2[i];
+	  element2.addEventListener("click", function (ev) {
 	    viewDynamic(ev, true);
 	  });
 	}
+
 	// =================================addEventListener=================================
 
 	var btn = document.getElementById("more-btn").addEventListener("click", function (ev) {
 	  window.open(currentView.more, "_blank");
 	});
 
-	document.getElementById("show-footer").addEventListener("click", function (ev) {
-	  // if (footerVisible){
-	  //   document.getElementById("hide-footer").style.display = "none";
-	  //   footerVisible = false;
-	  // } else {
-	  //   document.getElementById("hide-footer").style.display = "flex";
-	  //   footerVisible = true;
-	  // }
-	});
+	// document.getElementById("show-footer").addEventListener("click", function (ev) {
+	//   if (footerVisible){
+	//     document.getElementById("hide-footer").style.display = "none";
+	//     footerVisible = false;
+	//   } else {
+	//     document.getElementById("hide-footer").style.display = "flex";
+	//     footerVisible = true;
+	//   }
+	// });
 
 	document.addEventListener("DOMContentLoaded", function () {
 	  //Аналог $(document).ready(function(){
 	  (function () {
 	    setData(0);
 	    currentView = data.mock[0];
-	    var array = document.querySelectorAll(".img-dld");
-	    for (var i = 0; i < array.length; i++) {
-	      var element = array[i];
-	      element.addEventListener("click", function (ev) {
+
+	    var array3 = document.querySelectorAll(".img-dld");
+	    for (var i = 0; i < array3.length; i++) {
+	      var element3 = array3[i];
+	      element3.addEventListener("click", function (ev) {
+	        alert('!!!!');
 	        downloadItem(ev);
 	      });
 	    }
@@ -205,7 +208,7 @@
 	});
 	var mock = [{
 	    id: 1,
-	    subject: 'повышение НДС',
+	    subject: 'Повышение НДС',
 	    regulations: 'Основная ставка НДС составляет 18 процентов. Ей соответствует расчетная ставка 15,25 процентов.',
 	    changing: '1 января 2019 года ставки 18 и 15,25 процентов вырастут до 20 и 16,67 процентов соответственно.',
 	    prepare: 'Использовать новую ставку надо будет, если отгрузите товары (работы, услуги) после 1 января 2019. До этого момента придется внести изменения в действующие договоры с контрагентами, обновить учетную программу и онлайн-ККТ.',
@@ -339,7 +342,7 @@
 
 /***/ }),
 
-/***/ 27:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -12694,11 +12697,11 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(27)(module), (function() { return this; }())))
 
 /***/ }),
 
-/***/ 28:
+/***/ 27:
 /***/ (function(module, exports) {
 
 	module.exports = function(module) {
