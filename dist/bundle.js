@@ -96,6 +96,14 @@
 	    var id = data.mock[number].link[index].id_link;
 	    addItem(id, link, txt);
 	  }
+
+	  var array3 = document.querySelectorAll(".img-dld");
+	  for (var i = 0; i < array3.length; i++) {
+	    var element3 = array3[i];
+	    element3.addEventListener("click", function (ev) {
+	      downloadItem(ev);
+	    });
+	  }
 	};
 
 	function setActive() {
@@ -169,30 +177,11 @@
 	  window.open(currentView.more, "_blank");
 	});
 
-	// document.getElementById("show-footer").addEventListener("click", function (ev) {
-	//   if (footerVisible){
-	//     document.getElementById("hide-footer").style.display = "none";
-	//     footerVisible = false;
-	//   } else {
-	//     document.getElementById("hide-footer").style.display = "flex";
-	//     footerVisible = true;
-	//   }
-	// });
-
 	document.addEventListener("DOMContentLoaded", function () {
 	  //Аналог $(document).ready(function(){
 	  (function () {
 	    setData(0);
 	    currentView = data.mock[0];
-
-	    var array3 = document.querySelectorAll(".img-dld");
-	    for (var i = 0; i < array3.length; i++) {
-	      var element3 = array3[i];
-	      element3.addEventListener("click", function (ev) {
-	        alert('!!!!');
-	        downloadItem(ev);
-	      });
-	    }
 	  })();
 	});
 

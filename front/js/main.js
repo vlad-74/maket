@@ -22,7 +22,7 @@ function addItem(id, link, txt) {
     <div class="div-txt">
       <p>` + txt + `</p>
     </div>
-      <img id="`+ id +`" class="img-dld" src="./dist/img/slider/dwnld.png">
+      <img id="` + id + `" class="img-dld" src="./dist/img/slider/dwnld.png">
         `;
   document.getElementById("section").appendChild(d);
 }
@@ -37,12 +37,20 @@ function setDataSlider(number){
   m.className = "regular slider";;
   document.getElementById("slider__slider").appendChild(m);
 
-    for (let index = 0; index < data.mock[number].link.length; index++) {
-      const link = data.mock[number].link[index].link;
-      const txt = data.mock[number].link[index].txt;
-      const id = data.mock[number].link[index].id_link;
-      addItem(id, link, txt);
-    }
+  for (let index = 0; index < data.mock[number].link.length; index++) {
+    const link = data.mock[number].link[index].link;
+    const txt = data.mock[number].link[index].txt;
+    const id = data.mock[number].link[index].id_link;
+    addItem(id, link, txt);
+  }
+  
+  let array3 = document.querySelectorAll(".img-dld");
+  for (let i = 0; i < array3.length; i++) {
+    const element3 = array3[i];
+    element3.addEventListener("click", function (ev) {
+      downloadItem(ev);
+    });
+  }
 };
 
 function setActive(){
@@ -117,31 +125,9 @@ var btn = document.getElementById("more-btn").addEventListener("click", function
   window.open(currentView.more, "_blank");
 });
 
-// document.getElementById("show-footer").addEventListener("click", function (ev) {
-//   if (footerVisible){
-//     document.getElementById("hide-footer").style.display = "none";
-//     footerVisible = false;
-//   } else {
-//     document.getElementById("hide-footer").style.display = "flex";
-//     footerVisible = true;
-//   }
-// });
-
-document.addEventListener("DOMContentLoaded", function() {//Аналог $(document).ready(function(){
-  (function() {
+document.addEventListener("DOMContentLoaded", function () {//Аналог $(document).ready(function(){
+  (function () {
     setData(0);
-    currentView = data.mock[0]; 
-    
-    let array3 = document.querySelectorAll(".img-dld");
-    for (let i = 0; i < array3.length; i++) {
-      const element3 = array3[i];
-      element3.addEventListener("click", function (ev) {
-        alert('!!!!');
-        downloadItem(ev);
-      });
-    }
-
+    currentView = data.mock[0];
   })();
 });
-
-
