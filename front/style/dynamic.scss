@@ -14,8 +14,9 @@
                 .left__top{
                     display: flex;
                     .top__left, .top__right{
-                        flex-basis: 50%;
+                        flex-basis: 45%;
                         text-align: left;
+                        margin-right: 5%;
                         h2{
                             font-size: 150%;
                             // text-transform: uppercase;
@@ -40,9 +41,13 @@
                            font-size: 100%;
                         }
                     }
+                    .top__left:hover, .top__right:hover{
+                        border: 2px solid #B2B0B0;
+                        padding: 0 10px;
+                    }
                 }
                 .left__bottom{
-                    width: 100%;
+                    width: 90%;
                     text-align: left;
                     h2{
                         font-size: 150%;

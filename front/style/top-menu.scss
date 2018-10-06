@@ -12,38 +12,38 @@
             flex-basis: 100%;
             cursor:pointer;
             img{
-                width: 90%;
+                width: 100%;
             }
         }
     }
 
     .top-menu-top{
         &__1 > img:hover{
-            content:url('../../dist/img/menu/1.png');
+            content:url('../../dist/img/menu2/1.png');
         }
         &__2 > img:hover{
-            content:url('../../dist/img/menu/2.png');
+            content:url('../../dist/img/menu2/2.png');
         }
         &__3 > img:hover{
-            content:url('../../dist/img/menu/3.png');
+            content:url('../../dist/img/menu2/3.png');
         }
         &__4 > img:hover{
-            content:url('../../dist/img/menu/4.png');
+            content:url('../../dist/img/menu2/4.png');
         }
     }
 
     .top-menu-bot{
         &__5 > img:hover{
-            content:url('../../dist/img/menu/5.png');
+            content:url('../../dist/img/menu2/5.png');
         }
         &__6 > img:hover{
-            content:url('../../dist/img/menu/6.png');
+            content:url('../../dist/img/menu2/6.png');
         }
         &__7 > img:hover{
-            content:url('../../dist/img/menu/7.png');
+            content:url('../../dist/img/menu2/7.png');
         }
         &__8 > img:hover{
-            content:url('../../dist/img/menu/8.png');
+            content:url('../../dist/img/menu2/8.png');
         }
     }
   

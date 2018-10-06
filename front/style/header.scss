@@ -1,7 +1,14 @@
 .header{
     width:85%;
     margin: auto;
+    position: relative;
     img{
         width: 100%;
+    }
+    #logo{
+        position: absolute;
+        top: 16%;
+        left: 76%;
+        width: 12%;
     }
 }
