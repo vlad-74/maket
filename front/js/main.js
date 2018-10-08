@@ -4,6 +4,7 @@ import _ from 'lodash';
 
 let currentView;
 let footerVisible = true;
+let start = false;
 
 function animationDiv() {
 
@@ -83,6 +84,11 @@ function setData(number){
   
 }
 
+function onClickGoTo(id) {
+  let top = $('#' + id).offset().top; //узнаем высоту от начала страницы до блока на который ссылается якорь
+  $("body,html").animate({ scrollTop: top }, 1000);//анимируем переход на расстояние - top за 1500 мс
+}
+
 function viewDynamic(ev, bool){
   let item;
   animationDiv()
@@ -95,6 +101,8 @@ function viewDynamic(ev, bool){
   console.log(currentView);
 
   setData(+item - 1);
+
+  if (start) { onClickGoTo("change-color"); }
 }
 
 function downloadItem(ev){
@@ -128,5 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {//Аналог $(docu
   (function () {
     setData(0);
     currentView = data.mock[0];
+    start = true;
   })();
 });

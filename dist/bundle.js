@@ -63,6 +63,7 @@
 
 	var currentView = undefined;
 	var footerVisible = true;
+	var start = false;
 
 	function animationDiv() {
 
@@ -135,6 +136,11 @@
 	  }, 300);
 	}
 
+	function onClickGoTo(id) {
+	  var top = $('#' + id).offset().top; //узнаем высоту от начала страницы до блока на который ссылается якорь
+	  $("body,html").animate({ scrollTop: top }, 1000); //анимируем переход на расстояние - top за 1500 мс
+	}
+
 	function viewDynamic(ev, bool) {
 	  var item = undefined;
 	  animationDiv();
@@ -147,6 +153,10 @@
 	  console.log(currentView);
 
 	  setData(+item - 1);
+
+	  if (start) {
+	    onClickGoTo("change-color");
+	  }
 	}
 
 	function downloadItem(ev) {
@@ -180,6 +190,7 @@
 	  (function () {
 	    setData(0);
 	    currentView = data.mock[0];
+	    start = true;
 	  })();
 	});
 
