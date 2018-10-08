@@ -171,8 +171,6 @@
 	  });
 	}
 
-	// =================================addEventListener=================================
-
 	var btn = document.getElementById("more-btn").addEventListener("click", function (ev) {
 	  window.open(currentView.more, "_blank");
 	});
