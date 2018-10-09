@@ -103,24 +103,28 @@
                     text-decoration: none;
                     color:black;
                     font-style: normal;
+                    border-bottom: 2px solid black;
                 }
             }
             .footer-item:hover{
                 font-weight: bold;
+                a{
+                    border-bottom: 0;
+                }
             }
 
             .footer-item:hover::before{
                border-bottom: 2px solid #DD483B; 
             }
 
-            .footer-item::before{
-                content: '  ';
-                display: block;
-                position: absolute;
-                top: 90%;
-                width: 40px;
-                border-bottom: 2px solid black;
-            }
+            // .footer-item::before{
+            //     content: '  ';
+            //     display: block;
+            //     position: absolute;
+            //     top: 90%;
+            //     width: 40px;
+            //     border-bottom: 2px solid black;
+            // }
         }
         .footer__second-half{
             .footer-item{

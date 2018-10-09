@@ -57,7 +57,7 @@
 
 	__webpack_require__(2);
 
-	var _lodash = __webpack_require__(26);
+	var _lodash = __webpack_require__(27);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -340,7 +340,7 @@
 
 /***/ }),
 
-/***/ 26:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module, global) {/**
@@ -12695,11 +12695,11 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(27)(module), (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)(module), (function() { return this; }())))
 
 /***/ }),
 
-/***/ 27:
+/***/ 28:
 /***/ (function(module, exports) {
 
 	module.exports = function(module) {
